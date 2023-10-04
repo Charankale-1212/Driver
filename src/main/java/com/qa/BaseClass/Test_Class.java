@@ -9,13 +9,14 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.devtools.v113.browser.Browser;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
 public class Test_Class {
 	public static  WebDriver driver;
-	public WebDriver chromedriver;
+	//public WebDriver chromedriver;
 	public static Properties prop;
 	
 	
@@ -27,7 +28,7 @@ public static void Initionlising() throws Exception {
 	
 	//String Browser="browser";
 	
-	//if(Browser.equalsIgnoreCase("chrome")) {
+	/*if(Browser.equalsIgnoreCase("chrome")) {
 	
 	System.setProperty("webdriver.chrome.driver", "D:\\chromedriver2\\chromedriver.exe");
 	ChromeOptions options = new ChromeOptions();
@@ -35,14 +36,14 @@ public static void Initionlising() throws Exception {
 
 	//Driver = new ChromeDriver(options);
 	driver = new ChromeDriver(options);
-	//}else
-		//if(Browser.equalsIgnoreCase("firefox")) {
+	}else
+		if(Browser.equalsIgnoreCase("firefox")) {
 			
-			//System.setProperty("webdriver.gecko.driver", "D:\\gecko_driver\\geckodriver.exe");
-			//driver= new FirefoxDriver();
+			System.setProperty("webdriver.gecko.driver", "D:\\gecko_driver\\geckodriver.exe");
+			driver= new FirefoxDriver(); */
 		
-	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	driver.manage().window().maximize();
 	driver.manage().deleteAllCookies();
 	driver.get(prop.getProperty("URL"));
