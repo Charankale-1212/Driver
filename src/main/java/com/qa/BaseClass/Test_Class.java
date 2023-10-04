@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 public class Test_Class {
 	public static  WebDriver driver;
-	public WebDriver chromedriver;
+	//public WebDriver chromedriver;
 	public static Properties prop;
 	
 	
